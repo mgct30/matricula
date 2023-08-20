@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="listado_docentes" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2bd47f2f-e273-4522-815a-473267e08a2a">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="mysql"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[select * from docente]]>
+	</queryString>
+	<field name="Cod_Docente" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="Cod_Docente"/>
+		<property name="com.jaspersoft.studio.field.label" value="Cod_Docente"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="docente"/>
+	</field>
+	<field name="nombre" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nombre"/>
+		<property name="com.jaspersoft.studio.field.label" value="nombre"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="docente"/>
+	</field>
+	<field name="Id_Curso" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="Id_Curso"/>
+		<property name="com.jaspersoft.studio.field.label" value="Id_Curso"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="docente"/>
+	</field>
+	<field name="Direccion_Docente" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Direccion_Docente"/>
+		<property name="com.jaspersoft.studio.field.label" value="Direccion_Docente"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="docente"/>
+	</field>
+	<field name="Telef_Docente" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Telef_Docente"/>
+		<property name="com.jaspersoft.studio.field.label" value="Telef_Docente"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="docente"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Transparent" x="90" y="0" width="380" height="70" forecolor="#2929CF" uuid="10bb3ea1-3a50-45ab-8a33-98751199908c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="43"/>
+				</textElement>
+				<text><![CDATA[Listado Docentes]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="20" y="0" width="100" height="30" backcolor="#3A72C7" uuid="ab6b4061-3a81-48f2-8752-2b063852cb9b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="dcd89eb7-e13b-47d5-b4b4-b858d42476ad"/>
+				</reportElement>
+				<text><![CDATA[Cod_Docente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="120" y="0" width="100" height="30" backcolor="#3A72C7" uuid="16a03d26-8d55-498d-aacd-b27c1e38a986">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1c615edc-9620-446c-9deb-a504947b58b7"/>
+				</reportElement>
+				<text><![CDATA[nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="220" y="0" width="100" height="30" backcolor="#3A72C7" uuid="82ec8da5-fd9b-4dc9-b79b-037e63c8bb62">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="192a95fd-ee7e-45fd-8cb7-1a8709cc1bed"/>
+				</reportElement>
+				<text><![CDATA[Id_Curso]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="320" y="0" width="100" height="30" backcolor="#3A72C7" uuid="a61cc4a9-c18d-47c6-89e5-eb024ea06858">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="db30d8b8-966d-42a8-897d-983efc94b489"/>
+				</reportElement>
+				<text><![CDATA[Direccion_Docente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="420" y="0" width="100" height="30" backcolor="#3A72C7" uuid="2d7d58c6-ebc4-4b22-8a3c-0313a3de9ebd">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="80f6b10b-4366-4f11-99bd-512c1ee0cfc1"/>
+				</reportElement>
+				<text><![CDATA[Telef_Docente]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="32" splitType="Stretch">
+			<textField>
+				<reportElement x="20" y="0" width="100" height="30" uuid="e68e999b-6723-4552-a78e-543403629a4d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="dcd89eb7-e13b-47d5-b4b4-b858d42476ad"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{Cod_Docente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="0" width="100" height="30" uuid="b23c87af-b0d7-4c54-9e0d-fdea090d47e3">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1c615edc-9620-446c-9deb-a504947b58b7"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="0" width="100" height="30" uuid="c83c83a0-10c2-4a1d-b9fc-a8f5194fe096">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="192a95fd-ee7e-45fd-8cb7-1a8709cc1bed"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{Id_Curso}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="0" width="100" height="30" uuid="8c4c4ef4-3fbb-46c5-8ccf-8854b9948c44">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="db30d8b8-966d-42a8-897d-983efc94b489"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{Direccion_Docente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="420" y="0" width="100" height="30" uuid="c1cbb07e-f639-4c30-b34b-4638adbd8962">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="80f6b10b-4366-4f11-99bd-512c1ee0cfc1"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{Telef_Docente}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

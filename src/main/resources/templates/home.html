@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:insert="~{layout :: base(~{::title}, ~{::body})}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matricula</title>
+    <!-- Agrega el enlace al archivo CSS de Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>   
+<body >
+
+    <div class="container mt-5">
+        <h1 class="text-center text-primary">Alan Turing</h1>
+        <p class="text-muted text-center">Aprender hoy para ejercer mañana.</p>   
+        
+    </div>
+
+    <div class="container mt-5">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card bg-primary text-white" id="card1">
+              <div class="card-body">
+                <h5 class="card-title">Alumnos</h5>
+                <p class="card-text">Ingresa para ver los detalles de alumnos. <a th:href="@{/alumnos}" class="stretched-link"></a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card bg-primary text-white">
+              <div class="card-body">
+                <h5 class="card-title">Docentes</h5>
+                <p class="card-text">Ingresa para ver los detalles de docentes. <a th:href="@{/docentes}" class="stretched-link"></a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    
+      <!-- Agrega el enlace al archivo JavaScript de Bootstrap (opcional) -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
