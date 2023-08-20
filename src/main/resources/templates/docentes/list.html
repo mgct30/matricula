@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:insert="~{layout :: base(~{::title}, ~{::body})}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docentes</title>
+    <!-- Agrega el enlace al archivo CSS de Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+    <div class="container mt-5">
+        <h1 class="text-center text-primary">Docentes</h1>  
+    </div>
+
+    <div class="container mt-5">
+        <a class="btn btn-primary" th:href="@{/docentes/create}">Registra nuevo docente</a>
+        <a class="btn btn-secondary" th:href="@{/docentes/report}">Descargar reporte</a>
+    </div>
+
+    
+    
+    <div class="container mt-5">
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+                <th scope="col">Cod_Docente</th>
+                <th scope="col">Nom_CompletoDocente</th>
+                <th scope="col">Id_Curso</th>
+                <th scope="col">Direccion_Docente</th>
+                <th scope="col">Telef_Docente</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="docente : ${listaDocentes}">
+                <td th:text="${docente.CodDocente}"></td>
+                <td th:text="${docente.nombre}"></td>
+                <td th:text="${docente.IdCurso}"></td>
+                <td th:text="${docente.DireccionDocente}"></td>
+                <td th:text="${docente.TelefDocente}"></td>
+                <td>
+                    <a th:href="@{/docentes/{CodDocente}(CodDocente=${docente.CodDocente})}">Ver detalle</a>
+                </td>
+                <td>
+                    <a th:href="@{/docentes/{CodDocente}/edit(CodDocente=${docente.CodDocente})}">Editar</a>
+                </td>
+                
+
+            </tr>
+        </tbody>
+    </table>
+    
+</body>
+</html>

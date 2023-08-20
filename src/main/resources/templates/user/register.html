@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:insert="~{layout :: base(~{::title}, ~{::body})}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Registrar</title>
+    <!-- Agrega el enlace al archivo CSS de Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+    <div class="container mt-5">
+        <h1 class="text-center text-primary">Registrate</h1>
+        <p class="text-muted text-center">Registrate como administrador</p>
+    </div>
+    <br>
+    <br>
+
+    <div class="container"> 
+        <div style="display:flex;justify-content: center;align-items: center;">
+            <div>
+    <form th:action="@{/registrar}" method="post" th:object="${registerUser}">
+        <div>
+            <label for="nombre">Nombre</label>
+            <input id="nombre" type="text" th:field="*{username}">
+        </div>
+        <div>
+            <label for="email">Correo electronico</label>
+            <input id="email" type="email" th:field="*{email}">
+        </div>
+        <div>
+            <label for="password">Contraseña</label>
+            <input id="password" type="password" th:field="*{password}">
+        </div>
+        <br>
+        <button class="btn btn-primary">Registrarme</button>
+    </form>
+</div>
+</div>
+</div>
+</body>
+</html>

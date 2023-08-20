@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:insert="~{layout :: base(~{::title}, ~{::body})}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Alumno</title>
+    <!-- Agrega el enlace al archivo CSS de Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    
+    <div class="container mt-5">
+        <h1 class="text-center text-primary">Editar Alumno</h1>
+        
+    </div>
+    <br>
+    <br>
+
+
+    <div class="container"> 
+        <div style="display:flex;justify-content: center;align-items: center;">
+            <div>
+    <form th:action="@{/alumnos/{CodAlumno}(CodAlumno=${alumno.CodAlumno})}" method="post" th:object="${alumno}">
+
+        <div>
+            <label for="NombreAlumno">Nombre</label>
+            <input id="NombreAlumno" type="text" th:field="*{NombreAlumno}">
+            <!-- data binding -->
+        </div>
+        <div>
+            <label for="DireccionAlumno">DireccionAlumno</label>
+            <input id="DireccionAlumno" type="text" th:field="*{DireccionAlumno}">
+        </div>
+        <div>
+            <label for="IdCurso">IdCurso</label>
+            <input id="IdCurso" type="number" th:field="*{IdCurso}" step="0.5">
+        </div>
+        <div>
+            <label for="TelefonoAlumno">TelefonoAlumno</label>
+            <input id="TelefonoAlumno" type="text" th:field="*{TelefonoAlumno}" step="0.5">
+        </div>
+        <button class="btn btn-primary">Guardar</button>
+    </form>
+    <br>
+    <form th:action="@{/alumnos/{CodAlumno}/delete(CodAlumno=${alumno.CodAlumno})}" method="post">
+        <button class="btn btn-dark">Eliminar</button>
+    </form>
+</div>
+</div>
+</div>
+
+</body>
+</html>

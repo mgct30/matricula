@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:insert="~{layout :: base(~{::title}, ~{::body})}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regitrar alumno</title>
+    <!-- Agrega el enlace al archivo CSS de Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+    <div class="container mt-5">
+        <h1 class="text-center text-primary">Registrar Alumno</h1>
+        
+    </div>
+    <br>
+    <br>
+
+    <div class="container"> 
+        <div style="display: flex;justify-content: center;align-items: center;">
+        <form th:action="@{/alumnos}" method="post" th:object="${alumnoForm}">
+        <div class="form-group">
+            <label for="NombreAlumno">Nombre</label>
+            <input id="NombreAlumno" type="text" th:field="*{NombreAlumno}" placeholder="Ingresa tu nombre">
+        </div>
+        <div>
+            <label for="DireccionAlumno">DireccionAlumno</label>
+            <input id="DireccionAlumno" type="text" th:field="*{DireccionAlumno}" placeholder="Ingresa direccion">
+        </div>
+        <div>
+            <label for="IdCurso">IdCurso</label>
+            <input id="IdCurso" type="number" th:field="*{IdCurso}" placeholder="Ingresa id curso">
+        </div>
+        <div>
+            <label for="TelefonoAlumno">Telefono_Alumno</label>
+            <input id="TelefonoAlumno" type="text" th:field="*{TelefonoAlumno}" placeholder="Ingresa telefono">
+        </div>
+        <br>
+        <button class="btn btn-primary">Registrar</button>
+    </form>
+    </div>
+</div>
+</body>
+</html>
